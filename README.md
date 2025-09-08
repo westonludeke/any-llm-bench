@@ -36,7 +36,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
-pip install git+https://github.com/mozilla-ai/any-llm.git  # install any-llm
+pip install "any-llm-sdk[openai,anthropic,google,mistral,openrouter]"  # install any-llm with providers
 
 # Configure API keys
 cp env.example .env           # add your API keys
