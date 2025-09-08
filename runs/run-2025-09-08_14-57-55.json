@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-09-08 14:57:55",
+  "task": "summarize",
+  "prompt": "The quarterly earnings report shows strong growth across all business segments. Revenue increased by 15% compared to the previous quarter, driven primarily by increased demand in the technology sector. The company's cloud services division saw the most significant growth, with a 25% increase in subscriptions. Operating expenses remained stable, resulting in improved profit margins. The management team is optimistic about continued growth in the next quarter and has announced plans to expand into new markets.",
+  "model1": {
+    "model": "mock:gpt-4o-mini (Mock)",
+    "latency_ms": 150,
+    "tokens_in": 97.5,
+    "tokens_out": 35.1,
+    "cost": "$0.0001",
+    "output": "This is a mock summary of the input text. The original text was approximately 513 characters long and contained various information that would typically be summarized here.",
+    "ok": true,
+    "error": null
+  },
+  "model2": {
+    "model": "mock:claude-3-haiku (Mock)",
+    "latency_ms": 150,
+    "tokens_in": 97.5,
+    "tokens_out": 35.1,
+    "cost": "$0.0001",
+    "output": "This is a mock summary of the input text. The original text was approximately 513 characters long and contained various information that would typically be summarized here.",
+    "ok": true,
+    "error": null
+  },
+  "mock_mode": true
+}

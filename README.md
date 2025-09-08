@@ -11,7 +11,15 @@ any-llm unifies provider SDKs behind a single interface and normalizes responses
 ```bash
 git clone https://github.com/westonludeke/any-llm-bench
 cd any-llm-bench
+
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run the app
 streamlit run app.py
 ```
 
@@ -21,9 +29,19 @@ The app will automatically detect no API keys and enable **Mock Mode** - you can
 ```bash
 git clone https://github.com/westonludeke/any-llm-bench
 cd any-llm-bench
-cp env.example .env           # add your API keys
+
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 pip install git+https://github.com/mozilla-ai/any-llm.git  # install any-llm
+
+# Configure API keys
+cp env.example .env           # add your API keys
+
+# Run the app
 streamlit run app.py
 ```
 
