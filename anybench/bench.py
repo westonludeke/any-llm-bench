@@ -94,21 +94,57 @@ def run_once(model_id: str, task: str, prompt: str, mock_mode: bool = False) -> 
 
 
 def _get_mock_result(model_id: str, task: str, prompt: str) -> Dict[str, Any]:
-    """Generate mock results for demo purposes."""
+    """Generate mock results for demo purposes with model-specific variations."""
     
+    # Determine model characteristics for more realistic mock data
+    if "gpt" in model_id.lower() or "openai" in model_id.lower():
+        model_type = "openai"
+        base_latency = 120
+        base_cost = "$0.0001"
+    elif "claude" in model_id.lower() or "anthropic" in model_id.lower():
+        model_type = "anthropic"
+        base_latency = 180
+        base_cost = "$0.0002"
+    elif "gemini" in model_id.lower() or "google" in model_id.lower():
+        model_type = "google"
+        base_latency = 140
+        base_cost = "$0.0001"
+    else:
+        model_type = "generic"
+        base_latency = 150
+        base_cost = "$0.0001"
+    
+    # Generate task-specific outputs with model variations
     if task == "summarize":
-        output = f"This is a mock summary of the input text. The original text was approximately {len(prompt)} characters long and contained various information that would typically be summarized here."
+        if model_type == "openai":
+            output = f"**Summary:** The provided text ({len(prompt)} characters) contains key information that can be distilled into main points. The content appears to cover important topics that would benefit from a structured overview highlighting the most significant elements."
+        elif model_type == "anthropic":
+            output = f"Here's a concise summary of the {len(prompt)}-character text: The material presents several key concepts and details that are relevant to the main topic. The most important points include the primary themes and supporting information that provide context and depth to the subject matter."
+        else:
+            output = f"This is a mock summary of the input text. The original text was approximately {len(prompt)} characters long and contained various information that would typically be summarized here."
+    
     elif task == "extract_fields":
-        output = '{"vendor": "Mock Vendor Inc", "total": 123.45, "date": "2024-01-15"}'
+        if model_type == "openai":
+            output = '{"vendor": "Acme Corporation", "total": 1250.00, "date": "2024-01-15"}'
+        elif model_type == "anthropic":
+            output = '{"vendor": "Tech Solutions Inc", "total": 987.50, "date": "2024-01-20"}'
+        else:
+            output = '{"vendor": "Mock Vendor Inc", "total": 123.45, "date": "2024-01-15"}'
+    
     else:
         output = f"Mock response for {task} task with input length {len(prompt)} characters."
     
+    # Add some variation to metrics
+    import random
+    latency_variation = random.randint(-20, 20)
+    token_variation = random.randint(-5, 5)
+    
     return {
         "model": f"{model_id} (Mock)",
-        "latency_ms": 150,  # Simulated latency
-        "tokens_in": len(prompt.split()) * 1.3,  # Rough estimate
-        "tokens_out": len(output.split()) * 1.3,
-        "cost": "$0.0001",
+        "latency_ms": max(50, base_latency + latency_variation),
+        "tokens_in": int(len(prompt.split()) * 1.3) + token_variation,
+        "tokens_out": int(len(output.split()) * 1.3) + token_variation,
+        "cost": base_cost,
         "output": output,
         "ok": True,
         "error": None
