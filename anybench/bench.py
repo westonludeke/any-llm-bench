@@ -41,12 +41,20 @@ def run_once(model_id: str, task: str, prompt: str, mock_mode: bool = False) -> 
         # Time the execution
         start_time = time.perf_counter()
         
-        # Call any-llm
-        response = any_llm.completion(
-            model=model_id,
-            messages=messages,
-            temperature=0.1  # Low temperature for more consistent results
-        )
+        # Call any-llm with model-specific parameters
+        if "gpt-5" in model_id.lower():
+            # GPT-5 only supports default temperature (1)
+            response = any_llm.completion(
+                model=model_id,
+                messages=messages
+            )
+        else:
+            # Other models support custom temperature
+            response = any_llm.completion(
+                model=model_id,
+                messages=messages,
+                temperature=0.1  # Low temperature for more consistent results
+            )
         
         end_time = time.perf_counter()
         latency_ms = int((end_time - start_time) * 1000)
