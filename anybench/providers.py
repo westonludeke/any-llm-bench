@@ -12,9 +12,9 @@ PROVIDER_MODELS = {
         "openai:gpt-3.5-turbo",
     ],
     "anthropic": [
-        "anthropic:claude-3-haiku",
-        "anthropic:claude-3-sonnet",
-        "anthropic:claude-3-opus",
+        "anthropic:claude-3-haiku-20240307",
+        "anthropic:claude-3-sonnet-20240229",
+        "anthropic:claude-3-opus-20240229",
     ],
     "google": [
         "google:gemini-1.5-flash",
@@ -72,7 +72,7 @@ def get_default_models() -> List[str]:
     # Prefer these models if available
     preferred = [
         "openai:gpt-4o-mini",
-        "anthropic:claude-3-haiku",
+        "anthropic:claude-3-haiku-20240307",
         "google:gemini-1.5-flash",
     ]
     
