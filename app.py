@@ -86,25 +86,38 @@ def main():
     with col1:
         st.header("Input")
         
+        # Initialize prompt in session state if not exists
+        if "current_prompt" not in st.session_state:
+            st.session_state.current_prompt = ""
+        
         # Prompt input
         if task == "summarize":
             prompt = st.text_area(
                 "Text to summarize",
+                value=st.session_state.current_prompt,
                 placeholder="Paste the text you want to summarize here...",
-                height=200
+                height=200,
+                key="prompt_input"
             )
         elif task == "extract_fields":
             prompt = st.text_area(
                 "Text to extract fields from",
+                value=st.session_state.current_prompt,
                 placeholder="Paste text containing vendor, total, and date information...",
-                height=200
+                height=200,
+                key="prompt_input"
             )
         else:
             prompt = st.text_area(
                 "Prompt",
+                value=st.session_state.current_prompt,
                 placeholder="Enter your prompt here...",
-                height=200
+                height=200,
+                key="prompt_input"
             )
+        
+        # Update session state with current prompt
+        st.session_state.current_prompt = prompt
         
         # Run comparison button
         if st.button("🚀 Run Comparison", type="primary", disabled=not prompt.strip()):
@@ -136,13 +149,8 @@ def main():
             sample_text = "This is a sample prompt for testing purposes."
         
         if st.button("📝 Use Sample"):
-            st.session_state.sample_prompt = sample_text
+            st.session_state.current_prompt = sample_text
             st.rerun()
-        
-        # Load sample if requested
-        if "sample_prompt" in st.session_state:
-            prompt = st.session_state.sample_prompt
-            del st.session_state.sample_prompt
     
     # Display results
     if st.session_state.results:
