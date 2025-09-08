@@ -7,8 +7,10 @@ from typing import List, Dict
 # Curated model lists for each provider
 PROVIDER_MODELS = {
     "openai": [
-        "openai:gpt-4o-mini",
+        "openai:gpt-5",
         "openai:gpt-4o",
+        "openai:gpt-4o-mini",
+        "openai:gpt-4-turbo",
         "openai:gpt-3.5-turbo",
     ],
     "anthropic": [
@@ -70,11 +72,12 @@ def get_default_models() -> List[str]:
     """Get sensible default models, preferring cheaper/faster options."""
     enabled = enabled_models()
     
-    # Prefer these models if available
+    # Prefer these models if available (prioritize latest and most interesting)
     preferred = [
-        "openai:gpt-4o-mini",
+        "openai:gpt-5",
+        "openai:gpt-4o",
+        "anthropic:claude-3-7-sonnet-20250219",
         "anthropic:claude-3-5-haiku-20241022",
-        "google:gemini-1.5-flash",
     ]
     
     defaults = []
