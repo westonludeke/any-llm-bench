@@ -76,21 +76,39 @@ OPENROUTER_API_KEY=your-openrouter-key-here
 
 ## Using the app
 
-1. Pick two models from the sidebar.
+1. Pick two models from the sidebar (including latest GPT-5, Claude Sonnet 4, and more).
 2. Choose a task (Summarize or Extract fields) and enter or paste text.
 3. Click **Run comparison** to see outputs + latency.
 4. Click **Export report** to save Markdown and JSON under `runs/`.
+
+### Supported Models
+
+**OpenAI:** GPT-5, GPT-4o, GPT-4o-mini, GPT-4-turbo, GPT-3.5-turbo  
+**Anthropic:** Claude Sonnet 4, Claude 3.7 Sonnet, Claude 3.5 Haiku, Claude Opus 4  
+**Google:** Gemini 1.5 Flash, Gemini 1.5 Pro  
+**Mistral:** Mistral Small, Mistral Medium  
+**OpenRouter:** Various community models
 
 ## Reports
 
 * Markdown: includes models, task, prompt snippet, metrics table, and both outputs.
 * JSON: same data for automation or CI.
 
+## Key Features
+
+* **Latest Models:** Support for GPT-5, Claude Sonnet 4, and other cutting-edge models
+* **Smart Fallbacks:** Automatic Mock Mode when no API keys are present
+* **Model-Specific Handling:** Proper parameter handling for different model requirements
+* **Real-time Metrics:** Latency, token usage, and cost tracking
+* **Export Functionality:** Markdown and JSON reports for analysis
+* **Cross-Provider Comparison:** Side-by-side analysis across different AI providers
+
 ## Notes & limits
 
 * Token and cost info are best-effort (N/A if unavailable).
 * Results are non-deterministic; each run is timestamped.
 * Secrets never leave the server process; keys are not stored client-side.
+* GPT-5 uses default temperature (1) - custom temperature not supported.
 
 ## Stretch ideas
 
