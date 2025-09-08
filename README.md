@@ -6,27 +6,55 @@ A tiny Streamlit app that runs the same prompt against two LLMs via [any-llm] an
 any-llm unifies provider SDKs behind a single interface and normalizes responses to the OpenAI standard. This demo *shows that in action* so developers can compare models transparently and make informed trade-offs.
 
 ## Quickstart
+
+### Option 1: Demo Mode (No API Keys Required)
 ```bash
 git clone https://github.com/westonludeke/any-llm-bench
 cd any-llm-bench
-cp env.example .env           # add any keys you have
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Configure providers
+The app will automatically detect no API keys and enable **Mock Mode** - you can test all features immediately with simulated responses!
 
-Add any of these to `.env`:
+### Option 2: Real API Mode (With API Keys)
+```bash
+git clone https://github.com/westonludeke/any-llm-bench
+cd any-llm-bench
+cp env.example .env           # add your API keys
+pip install -r requirements.txt
+pip install git+https://github.com/mozilla-ai/any-llm.git  # install any-llm
+streamlit run app.py
+```
+
+## Mock Mode
+
+**Mock Mode** is automatically enabled when no API keys are detected. This feature:
+
+- ✅ **Works immediately** without any setup
+- ✅ **Simulates realistic responses** with model-specific variations
+- ✅ **Shows different outputs** for different model types (GPT vs Claude vs Gemini)
+- ✅ **Includes realistic metrics** (latency, tokens, cost)
+- ✅ **Perfect for demos** and testing the interface
+
+Mock Mode demonstrates the complete workflow and is ideal for:
+- **Code reviews** and demonstrations
+- **Testing the interface** without API costs
+- **Understanding the app** before adding real keys
+
+## Configure Real API Providers
+
+Add any of these to your `.env` file:
 
 ```
-OPENAI_API_KEY=
-ANTHROPIC_API_KEY=
-GOOGLE_API_KEY=
-MISTRAL_API_KEY=
-OPENROUTER_API_KEY=
+OPENAI_API_KEY=sk-your-openai-key-here
+ANTHROPIC_API_KEY=sk-ant-your-anthropic-key-here
+GOOGLE_API_KEY=your-google-key-here
+MISTRAL_API_KEY=your-mistral-key-here
+OPENROUTER_API_KEY=your-openrouter-key-here
 ```
 
-On startup the app enables only providers with keys present. If none are set, you'll see a banner and Mock Mode.
+**Note:** You only need to add keys for providers you want to use. The app automatically detects which providers are available and enables only those models.
 
 ## Using the app
 
