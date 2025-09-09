@@ -2,6 +2,19 @@
 
 A tiny Streamlit app that runs the same prompt against two LLMs via [any-llm] and shows side-by-side outputs and latency. Designed as a developer-onboarding demo: quick to run, easy to extend, and safe with secrets.
 
+## Contents
+- [Live Demo](#-live-demo)
+- [Quickstart](#quickstart)
+- [Mock Mode](#mock-mode)
+- [Configure Providers](#configure-real-api-providers)
+- [Using the App](#using-the-app)
+- [Reports](#reports)
+- [Key Features](#key-features)
+- [Notes & Limits](#notes--limits)
+- [Stretch Ideas](#stretch-ideas)
+- [Feedback & Contributions](#-feedback--contributions)
+- [License](#license)
+
 ## 🚀 Live Demo
 
 **Try it now:** [any-llm-bench.streamlit.app](https://any-llm-bench.streamlit.app)
