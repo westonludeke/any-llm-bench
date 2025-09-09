@@ -164,3 +164,10 @@ env_keys = {
 
 * Add an "Agent toggle" using `any-agent` to show framework overhead.
 * Package this as a Blueprint template.
+
+## 🤝 Feedback & Contributions
+
+**Questions, comments, or feedback?** 
+- Open a [GitHub Issue](https://github.com/westonludeke/any-llm-bench/issues) for questions or bug reports
+- Suggest new features or improvements
+- Share your use cases and experiences
