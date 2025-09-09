@@ -176,7 +176,7 @@ env_keys = {
 * Secrets never leave the server process; keys are not stored client-side.
 * GPT-5 uses default temperature (1) - custom temperature not supported.
 
-## Stretch ideas
+## Future enhancement ideas
 
 * Add an "Agent toggle" using `any-agent` to show framework overhead.
 * Package this as a Blueprint template.
