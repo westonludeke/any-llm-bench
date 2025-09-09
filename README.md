@@ -2,6 +2,12 @@
 
 A tiny Streamlit app that runs the same prompt against two LLMs via [any-llm] and shows side-by-side outputs and latency. Designed as a developer-onboarding demo: quick to run, easy to extend, and safe with secrets.
 
+## 🚀 Live Demo
+
+**Try it now:** [any-llm-bench.streamlit.app](https://any-llm-bench.streamlit.app)
+
+*This demo runs in Mock Mode - no API keys required!*
+
 ## Why this exists
 any-llm unifies provider SDKs behind a single interface and normalizes responses to the OpenAI standard. This demo *shows that in action* so developers can compare models transparently and make informed trade-offs.
 
