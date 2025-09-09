@@ -2,6 +2,8 @@
 
 A lightweight Streamlit app that lets you run the same prompt across two LLMs using [any-llm](https://github.com/mozilla-ai/any-llm), with side-by-side outputs and latency metrics. It’s built as a developer-onboarding demo: quick to run, easy to extend, and designed with transparency and safe secret handling in mind.
 
+<img src="https://p52.f0.n0.cdn.zight.com/items/YEuEW9k6/d1beb09c-e7c6-40b3-8582-4d8ea6067198.jpg" width="800">
+
 ## Contents
 - [Live Demo](#-live-demo)
 - [Quickstart](#quickstart)
