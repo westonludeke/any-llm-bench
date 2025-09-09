@@ -1,6 +1,6 @@
-# any-llm Model Comparator (demo)
+# any-llm Bench — Side-by-Side Model Comparator
 
-A tiny Streamlit app that runs the same prompt against two LLMs via [any-llm] and shows side-by-side outputs and latency. Designed as a developer-onboarding demo: quick to run, easy to extend, and safe with secrets.
+A lightweight Streamlit app that lets you run the same prompt across two LLMs using [any-llm](https://github.com/mozilla-ai/any-llm), with side-by-side outputs and latency metrics. It’s built as a developer-onboarding demo: quick to run, easy to extend, and designed with transparency and safe secret handling in mind.
 
 ## Contents
 - [Live Demo](#-live-demo)
@@ -19,7 +19,7 @@ A tiny Streamlit app that runs the same prompt against two LLMs via [any-llm] an
 
 **Try it now:** [any-llm-bench.streamlit.app](https://any-llm-bench.streamlit.app)
 
-*This demo runs in Mock Mode - no API keys required!*
+*This demo runs in Mock Mode: no API keys required!*
 
 ## Why this exists
 any-llm unifies provider SDKs behind a single interface and normalizes responses to the OpenAI standard. This demo *shows that in action* so developers can compare models transparently and make informed trade-offs.
