@@ -171,3 +171,7 @@ env_keys = {
 - Open a [GitHub Issue](https://github.com/westonludeke/any-llm-bench/issues) for questions or bug reports
 - Suggest new features or improvements
 - Share your use cases and experiences
+
+## License
+
+This project is licensed under the [Apache License 2.0](./LICENSE).
