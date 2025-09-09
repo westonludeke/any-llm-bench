@@ -104,6 +104,35 @@ OPENROUTER_API_KEY=your-openrouter-key-here
 **Mistral:** Mistral Small, Mistral Medium  
 **OpenRouter:** Various community models
 
+### Adding Additional Models
+
+To add new models or providers, edit `anybench/providers.py`:
+
+**Adding a new model to existing provider:**
+```python
+"google": [
+    "google:gemini-1.5-flash",
+    "google:gemini-1.5-pro",
+    "google:gemini-2.0-flash",  # Add new model here
+],
+```
+
+**Adding a new provider:**
+```python
+# 1. Add to PROVIDER_MODELS
+"new_provider": [
+    "new_provider:model-name",
+],
+
+# 2. Add environment variable detection
+env_keys = {
+    # ... existing providers
+    "new_provider": "NEW_PROVIDER_API_KEY",
+}
+```
+
+**Note:** Ensure the model names match the exact identifiers expected by any-llm and the provider's API.
+
 ## Reports
 
 * Markdown: includes models, task, prompt snippet, metrics table, and both outputs.
