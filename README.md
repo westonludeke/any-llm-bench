@@ -19,7 +19,7 @@ A lightweight Streamlit app that lets you run the same prompt across two LLMs us
 
 ## 🚀 Live Demo
 
-🎥 **Watch the 5-minute demo video:** [YouTube Link](https://youtu.be/your-link-here)  
+🎥 **Watch the 5-minute demo video:** [YouTube Link](https://www.youtube.com/watch?v=GqjKjf6Ucow)  
 💻 **Try it now:** [any-llm-bench.streamlit.app](https://any-llm-bench.streamlit.app)
 
 *This demo runs in Mock Mode: no API keys required*
