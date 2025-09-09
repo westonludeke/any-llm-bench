@@ -181,6 +181,10 @@ env_keys = {
 * Add an "Agent toggle" using `any-agent` to show framework overhead.
 * Package this as a Blueprint template.
 
+## Known Issues / Limitations
+
+* Cost metrics are displayed in Mock Mode, but not yet populated in Real API Mode. This is due to differences in provider responses and is noted for future enhancement.
+
 ## 🤝 Feedback & Contributions
 
 **Questions, comments, or feedback?** 
