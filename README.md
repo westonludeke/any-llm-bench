@@ -19,9 +19,10 @@ A lightweight Streamlit app that lets you run the same prompt across two LLMs us
 
 ## 🚀 Live Demo
 
-**Try it now:** [any-llm-bench.streamlit.app](https://any-llm-bench.streamlit.app)
+🎥 **Watch the 5-minute demo video:** [YouTube Link](https://youtu.be/your-link-here)  
+💻 **Try it now:** [any-llm-bench.streamlit.app](https://any-llm-bench.streamlit.app)
 
-*This demo runs in Mock Mode: no API keys required!*
+*This demo runs in Mock Mode: no API keys required*
 
 ## Why this exists
 any-llm unifies provider SDKs behind a single interface and normalizes responses to the OpenAI standard. This demo *shows that in action* so developers can compare models transparently and make informed trade-offs.
@@ -44,7 +45,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The app will automatically detect no API keys and enable **Mock Mode** - you can test all features immediately with simulated responses!
+The app will automatically detect no API keys and enable **Mock Mode**, you can test all features immediately with simulated responses.
 
 ### Option 2: Real API Mode (With API Keys)
 ```bash
