@@ -77,9 +77,24 @@ OPENROUTER_API_KEY=your-openrouter-key-here
 ## Using the app
 
 1. Pick two models from the sidebar (including latest GPT-5, Claude Sonnet 4, and more).
-2. Choose a task (Summarize or Extract fields) and enter or paste text.
+2. Choose a task and enter or paste text.
 3. Click **Run comparison** to see outputs + latency.
 4. Click **Export report** to save Markdown and JSON under `runs/`.
+
+### Available Tasks
+
+**📝 Summarize**
+- Creates concise, accurate summaries of long text
+- Perfect for document analysis and content distillation
+- Shows how different models approach summarization
+- Ideal for comparing model writing styles and focus areas
+
+**📊 Extract Fields**
+- Extracts structured data (vendor, total, date) from text
+- Returns results as validated JSON format
+- Great for invoice processing and data extraction
+- Tests model ability to follow structured output requirements
+- Validates JSON output and marks errors if format is invalid
 
 ### Supported Models
 
