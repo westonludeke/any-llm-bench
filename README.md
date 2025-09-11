@@ -13,7 +13,8 @@ A lightweight Streamlit app that lets you run the same prompt across two LLMs us
 - [Reports](#reports)
 - [Key Features](#key-features)
 - [Notes & Limits](#notes--limits)
-- [Stretch Ideas](#stretch-ideas)
+- [Future enhancement ideas](#future-enhancement-ideas)
+- [Known Issues / Limitations](#known-issues--limitations)
 - [Feedback & Contributions](#-feedback--contributions)
 - [License](#license)
 
